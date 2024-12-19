@@ -8,17 +8,19 @@ public  class Apprenant extends Personne
    private Classe classe;
    ArrayList<Apprenant> listeApprenants;
 
-    Scanner scanner = new Scanner(System.in);
+
 
     public Apprenant(int ID, String name, String prenom, String email) {
         super(ID, name, prenom, email);
+
+        Scanner scanner = new Scanner(System.in);
     }
     // Apprenant appr = new Apprenant("", "", "");
     // app.ajoutApprenant()
     static void ajoutApprenant ()
     {
 
-        
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Ajouter un nom");
         String name =  scanner.next();
