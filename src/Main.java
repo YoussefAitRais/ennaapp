@@ -51,7 +51,7 @@ public class Main {
 
     public static void menuApprenant() {
         int choix = 0;
-        while (choix != 4) { 
+        while (choix != 4) {
 
             System.out.println("Ajouter un apprenant : ");
             System.out.println("Modifier un apprenant :");
@@ -77,8 +77,6 @@ public class Main {
                     break;
 
             }
-
-
         }
     }
 }
