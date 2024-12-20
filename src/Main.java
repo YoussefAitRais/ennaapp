@@ -19,6 +19,8 @@ public class Main {
 
 
             //affichage
+            System.out.println("-------------------------------");
+
             System.out.println("1--Systeme gestion des Apprenants");
 
             System.out.println("2--Systeme gestion des Formateurs");
@@ -52,12 +54,12 @@ public class Main {
     public static void menuApprenant() {
         int choix = 0;
         while (choix != 4) {
-
-            System.out.println("Ajouter un apprenant : ");
-            System.out.println("Modifier un apprenant :");
-            System.out.println("Supprimer un apprenant :");
-            System.out.println("Afficher un apprenant :");
-
+            System.out.println("------------------------------- ");
+            System.out.println("1 >> Ajouter un apprenant : ");
+            System.out.println("2 >> Modifier un apprenant :");
+            System.out.println("3 >> Supprimer un apprenant :");
+            System.out.println("4 >> Afficher un apprenant :");
+            System.out.println("---------------------------------");
             choix = scanner.nextInt();
             switch (choix) {
                 case 1:
@@ -66,7 +68,7 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.println("Modifier un apprenant :");
+                    modifierapprenant();
                     break;
 
                 case 3:
@@ -93,6 +95,10 @@ public class Main {
         System.out.print("Entrez l'email de l'apprenant : ");
         String email = scanner.next();
 
+        System.out.println("-------------------------------");
+        System.out.println("Apprenant ajouté avec succès ! ");
+        System.out.println("-------------------------------");
+
 
         apprenants.add(new Apprenant(nom, prenom, email));
     }
@@ -102,14 +108,53 @@ public class Main {
 
         for (int i = 0; i < apprenants.size(); i++) {
             System.out.println("\n\n\nles listes des apprenants");
+            System.out.println("\n\n\nles listes des apprenants");
             System.out.println("---------------------------");
-            System.out.println("le nom est : " + apprenants.get(i).getID());
+            System.out.println("L'ID est : " + apprenants.get(i).getID());
             System.out.println("le nom est : " + apprenants.get(i).getName());
             System.out.println("le prenom est : " + apprenants.get(i).getPrenom());
             System.out.println("le email est : " + apprenants.get(i).getEmail()+"\n\n\n");
-
-
         }
+    }
+
+    public static void modifierapprenant(){
+
+        System.out.println("Entre le nombre de ID");
+        int id =  scanner.nextInt();
+
+        for (int i = 0 ; i < apprenants.size() ; i++)
+        {
+            if (id==apprenants.get(i).getID()){
+
+                System.out.println("Saisir la nouvelle nom");
+                String nom = scanner.next();
+
+
+                System.out.println("Saisir la nouvelle prenom");
+                String prenom = scanner.next();
+
+
+                System.out.println("Saisir la nouvelle email");
+                String email = scanner.next();
+
+                apprenants.get(i).setName(nom);
+                apprenants.get(i).setPrenom(prenom);
+                apprenants.get(i).setEmail(email);
+
+
+                System.out.println("-------------------------------");
+                System.out.println("Apprenant modifié avec succès ! ");
+                System.out.println("-------------------------------");
+
+
+            }
+        }
+
+
+
+
+
+
     }
 }
 
