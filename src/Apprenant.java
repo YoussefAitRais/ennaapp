@@ -18,9 +18,11 @@ public  class Apprenant extends Personne
     public Apprenant() {
     }
 
-    // Apprenant appr = new Apprenant("", "", "");
+
+        // Apprenant appr = new Apprenant("", "", "");
     // app.ajoutApprenant()
-    static void ajoutApprenant ()
+
+    static void ajoutApprenant()
     {
 
         Scanner scanner = new Scanner(System.in);
@@ -38,16 +40,16 @@ public  class Apprenant extends Personne
 
     }
 
-    static void ModifierApprenant ()
-    {
-        Scanner scanner = new Scanner(System.in);
-
-
-
-
-
-
-
-    }
+//    static void ModifierApprenant()
+//    {
+//        Scanner scanner = new Scanner(System.in);
+//
+//
+//
+//
+//
+//
+//
+//    }
 
 }

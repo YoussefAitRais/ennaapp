@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
 
     static Scanner scanner = new Scanner(System.in);
-   Apprenant apprenant=new Apprenant();
+    Apprenant apprenant = new Apprenant();
     static ArrayList<Apprenant> apprenants = new ArrayList();
     ArrayList<Classe> classes = new ArrayList();
     ArrayList<Formateur> formateurs = new ArrayList();
@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        int choix=0;
+        int choix = 0;
         while (choix != 4) {
 
 
@@ -58,7 +58,7 @@ public class Main {
             System.out.println("Supprimer un apprenant :");
             System.out.println("Afficher un apprenant :");
 
-            choix=scanner.nextInt();
+            choix = scanner.nextInt();
             switch (choix) {
                 case 1:
                     ajoutapprenannt();
@@ -75,36 +75,41 @@ public class Main {
 
                 case 4:
                     System.out.println("Afficher un apprenant :");
+                    afficherapprenant();
                     break;
 
             }
         }
     }
-     public static void ajoutapprenannt(){
 
-         System.out.print("Entrez le nom de l'apprenant : ");
-         String nom = scanner.next();
+    public static void ajoutapprenannt() {
 
-         System.out.print("Entrez le prénom de l'apprenant : ");
-         String prenom = scanner.next();
+        System.out.print("Entrez le nom de l'apprenant : ");
+        String nom = scanner.next();
 
-         System.out.print("Entrez l'email de l'apprenant : ");
-         String email = scanner.next();
+        System.out.print("Entrez le prénom de l'apprenant : ");
+        String prenom = scanner.next();
+
+        System.out.print("Entrez l'email de l'apprenant : ");
+        String email = scanner.next();
 
 
-        apprenants.add(new Apprenant( nom,prenom,email));
+        apprenants.add(new Apprenant(nom, prenom, email));
     }
 
-    public static void afficherapprenant(){
-
-        System.out.println("les listes des apprenants"+);
-        System.out.println("---------------------------");
-        System.out.println("le nom est : " );
-        System.out.println("le prenom est : ");
-        System.out.println("le email est : ");
+    public static void afficherapprenant() {
 
 
+        for (int i = 0; i < apprenants.size(); i++) {
+            System.out.println("\n\n\nles listes des apprenants");
+            System.out.println("---------------------------");
+            System.out.println("le nom est : " + apprenants.get(i).getID());
+            System.out.println("le nom est : " + apprenants.get(i).getName());
+            System.out.println("le prenom est : " + apprenants.get(i).getPrenom());
+            System.out.println("le email est : " + apprenants.get(i).getEmail()+"\n\n\n");
 
+
+        }
     }
 }
 
