@@ -6,12 +6,13 @@ import java.util.Scanner;
 public class Main {
 
     static Scanner scanner = new Scanner(System.in);
+   Apprenant apprenant=new Apprenant();
+    static ArrayList<Apprenant> apprenants = new ArrayList();
+    ArrayList<Classe> classes = new ArrayList();
+    ArrayList<Formateur> formateurs = new ArrayList();
 
     public static void main(String[] args) {
 
-        ArrayList<Apprenant> apprenants = new ArrayList();
-        ArrayList<Classe> classes = new ArrayList();
-        ArrayList<Formateur> formateurs = new ArrayList();
 
         int choix=0;
         while (choix != 4) {
@@ -30,9 +31,8 @@ public class Main {
 
             choix = scanner.nextInt();
             switch (choix) {
-                case 1: menuApprenant();
-
-
+                case 1:
+                    menuApprenant();
                     break;
                 case 2:
 
@@ -61,7 +61,8 @@ public class Main {
             choix=scanner.nextInt();
             switch (choix) {
                 case 1:
-                    System.out.println("Ajouter un apprenant : ");
+                    ajoutapprenannt();
+
                     break;
 
                 case 2:
@@ -79,4 +80,31 @@ public class Main {
             }
         }
     }
+     public static void ajoutapprenannt(){
+
+         System.out.print("Entrez le nom de l'apprenant : ");
+         String nom = scanner.next();
+
+         System.out.print("Entrez le prénom de l'apprenant : ");
+         String prenom = scanner.next();
+
+         System.out.print("Entrez l'email de l'apprenant : ");
+         String email = scanner.next();
+
+
+        apprenants.add(new Apprenant( nom,prenom,email));
+    }
+
+    public static void afficherapprenant(){
+
+        System.out.println("les listes des apprenants"+);
+        System.out.println("---------------------------");
+        System.out.println("le nom est : " );
+        System.out.println("le prenom est : ");
+        System.out.println("le email est : ");
+
+
+
+    }
 }
+

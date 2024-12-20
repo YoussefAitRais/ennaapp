@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Deque;
 import java.util.Scanner;
 
 public  class Apprenant extends Personne
@@ -10,11 +9,15 @@ public  class Apprenant extends Personne
 
 
 
-    public Apprenant(int ID, String name, String prenom, String email) {
-        super(ID, name, prenom, email);
+    public Apprenant(String name, String prenom, String email) {
+        super(name, prenom, email);
 
         Scanner scanner = new Scanner(System.in);
     }
+
+    public Apprenant() {
+    }
+
     // Apprenant appr = new Apprenant("", "", "");
     // app.ajoutApprenant()
     static void ajoutApprenant ()
