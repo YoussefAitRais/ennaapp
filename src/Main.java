@@ -72,7 +72,7 @@ public class Main {
                     break;
 
                 case 3:
-                    System.out.println("Supprimer un apprenant :");
+                    supprimerapprenant();
                     break;
 
                 case 4:
@@ -108,7 +108,7 @@ public class Main {
 
         for (int i = 0; i < apprenants.size(); i++) {
             System.out.println("\n\n\nles listes des apprenants");
-            System.out.println("\n\n\nles listes des apprenants");
+            
             System.out.println("---------------------------");
             System.out.println("L'ID est : " + apprenants.get(i).getID());
             System.out.println("le nom est : " + apprenants.get(i).getName());
@@ -149,12 +149,25 @@ public class Main {
 
             }
         }
+    }
+    public static void supprimerapprenant() {
+        boolean trouveapprenant = false;
+        System.out.println("Entre le nombre de ID");
+        int id = scanner.nextInt();
+        for (int i = 0; i < apprenants.size(); i++) {
+            if (id == apprenants.get(i).getID()) {
+                apprenants.remove(i);
+                trouveapprenant = true;
+
+                System.out.println("-------------------------------");
+                System.out.println("Apprenant supprimé avec succès !");
+                System.out.println("-------------------------------");
+                break;
 
 
+            }
 
-
-
-
+        }
     }
 }
 
