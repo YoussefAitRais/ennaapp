@@ -8,7 +8,7 @@ public class Formateur extends Personne {
 
     ArrayList<Formateur> listeformateur;
     static Scanner scanner = new Scanner(System.in);
-    Formateur formateur = new Formateur();
+
     static ArrayList<Formateur> formateurs = new ArrayList();
     ArrayList<Classe> classes = new ArrayList();
 

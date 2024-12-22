@@ -6,10 +6,6 @@ import java.util.Scanner;
 public class Application {
 
     static Scanner scanner = new Scanner(System.in);
-    Apprenant apprenant = new Apprenant();
-    static ArrayList<Apprenant> apprenants = new ArrayList();
-    ArrayList<Classe> classes = new ArrayList();
-    ArrayList<Formateur> formateurs = new ArrayList();
 
     public static void main(String[] args) {
 
@@ -40,10 +36,10 @@ public class Application {
                     menuForamteur();
                     break;
                 case 3:
-                     menuClasse();
+                    menuClasse();
                     break;
                 case 4:
-
+                    System.exit(0);
                     break;
 
 
@@ -53,7 +49,7 @@ public class Application {
 
     public static void menuApprenant() {
         int choix = 0;
-        while (choix != 4) {
+        while (choix != 5) {
             System.out.println("------------------------------- ");
             System.out.println("1 >> Ajouter un apprenant : ");
             System.out.println("2 >> Modifier un apprenant :");
@@ -63,31 +59,29 @@ public class Application {
             choix = scanner.nextInt();
             switch (choix) {
                 case 1:
-//                    ajoutapprenannt();
                     Apprenant.ajoutapprenannt();
-
                     break;
 
                 case 2:
-//                    modifierapprenant();
                     Apprenant.modifierapprenant();
                     break;
 
                 case 3:
-//                    supprimerapprenant();
                     Apprenant.supprimerapprenant();
                     break;
 
                 case 4:
-
-//                    afficherapprenant();
                     Apprenant.afficherapprenant();
+                    break;
+
+                case 5:
                     break;
 
             }
         }
     }
-    public static void menuForamteur() {
+
+        public static void menuForamteur() {
         int choix = 0;
         while (choix != 4) {
             System.out.println("------------------------------- ");
@@ -96,6 +90,7 @@ public class Application {
             System.out.println("3 >> Supprimer un foramteur :");
             System.out.println("4 >> Afficher un foramteur :");
             System.out.println("---------------------------------");
+            Scanner scanner = new Scanner(System.in);
             choix = scanner.nextInt();
             switch (choix) {
                 case 1:
@@ -127,6 +122,7 @@ public class Application {
             System.out.println("3 >> Supprimer un classe :");
             System.out.println("4 >> Afficher un classe :");
             System.out.println("---------------------------------");
+            Scanner scanner = new Scanner(System.in);
             choix = scanner.nextInt();
             switch (choix) {
                 case 1:

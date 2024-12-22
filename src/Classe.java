@@ -1,45 +1,60 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Classe extends Personne {
-
-
-
-    ArrayList<Classe> listeclasse;
-    static Scanner scanner = new Scanner(System.in);
-    Classe classe = new Classe();
-    static ArrayList<Classe> classes = new ArrayList();
+public class Classe  {
 
 
 
 
 
-    public Classe(String name, String prenom, String email) {
-        super(name, prenom, email);
+    Formateur formateur;
+    static ArrayList<Apprenant> apprenants = new ArrayList();
+    static ArrayList<Classe> classes = new ArrayList<>();
 
-        Scanner scanner = new Scanner(System.in);
+    private String nom;
+    private int id;
+
+    static private int counter = 1;
+
+    public Classe(String nom) {
+        this.formateur = null;
+        this.nom = nom;
+        this.id = counter;
+        counter++;
     }
 
     public Classe() {
     }
 
+    public int getID (){
+        return this.id;
+    }
+
+    public String getName()
+    {
+        return this.nom;
+    }
+    public void setName(String nom){
+        this.nom = nom;
+    }
+
+
+
+
+
+
+    static Scanner scanner = new Scanner(System.in);
     public static void ajouteclasse() {
 
         System.out.print("Entrez le nom de classe : ");
         String nom = scanner.next();
 
-        System.out.print("Entrez le prénom de classe : ");
-        String prenom = scanner.next();
-
-        System.out.print("Entrez l'email de classe : ");
-        String email = scanner.next();
-
         System.out.println("-------------------------------");
-        System.out.println("Apprenant ajouté avec succès ! ");
+        System.out.println("Classe ajouté avec succès ! ");
         System.out.println("-------------------------------");
 
 
-//            classes.add(new Classe(nom, prenom, email));
+            classes.add(new Classe(nom));
     }
 
 
@@ -51,8 +66,7 @@ public class Classe extends Personne {
             System.out.println("---------------------------");
             System.out.println("L'ID est : " + classes.get(i).getID());
             System.out.println("le nom est : " + classes.get(i).getName());
-            System.out.println("le prenom est : " + classes.get(i).getPrenom());
-            System.out.println("le email est : " + classes.get(i).getEmail() + "\n\n\n");
+
         }
     }
 
@@ -68,16 +82,9 @@ public class Classe extends Personne {
                 String nom = scanner.next();
 
 
-                System.out.println("Saisir la nouvelle prenom");
-                String prenom = scanner.next();
-
-
-                System.out.println("Saisir la nouvelle email");
-                String email = scanner.next();
 
                 classes.get(i).setName(nom);
-                classes.get(i).setPrenom(prenom);
-                classes.get(i).setEmail(email);
+
 
 
                 System.out.println("-------------------------------");
@@ -90,7 +97,7 @@ public class Classe extends Personne {
     }
 
     public static void supprimerclasse() {
-        boolean trouveclasse = false;
+
         System.out.println("Entre le nombre de ID");
         int id = scanner.nextInt();
 
@@ -98,7 +105,7 @@ public class Classe extends Personne {
 
             if (id == classes.get(i).getID()) {
                 classes.remove(i);
-                trouveclasse = true;
+
 
                 System.out.println("-------------------------------");
                 System.out.println("Classe supprimé avec succès !");

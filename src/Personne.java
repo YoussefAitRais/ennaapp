@@ -10,10 +10,6 @@ public class Personne
     private String email;
 
     static Scanner scanner = new Scanner(System.in);
-    Personne personne = new Personne();
-    static ArrayList<Personne> personnes = new ArrayList();
-    ArrayList<Classe> classes = new ArrayList();
-
     public Personne (  String name, String prenom , String email) {
         this.ID = compteur;
         this.name = name;
@@ -26,20 +22,20 @@ public class Personne
 
     }
 
-    public static void ajoutformateur() {
-    }
-
-    public static void afficherformateur() {
-    }
-
-    public static void supprimerformateur() {
-    }
-
-    public static void modifierformateur() {
-    }
+//    public static void ajoutformateur() {
+//    }
+//
+//    public static void afficherformateur() {
+//    }
+//
+//    public static void supprimerformateur() {
+//    }
+//
+//    public static void modifierformateur() {
+//    }
 
     public int getID() {
-        return ID;
+        return this.ID;
     }
 
     public void setID(int ID) {
