@@ -55,6 +55,7 @@ public class Application {
             System.out.println("2 >> Modifier un apprenant :");
             System.out.println("3 >> Supprimer un apprenant :");
             System.out.println("4 >> Afficher un apprenant :");
+            System.out.println("5 >> La liste Principale :");
             System.out.println("---------------------------------");
             choix = scanner.nextInt();
             switch (choix) {
@@ -73,9 +74,10 @@ public class Application {
                 case 4:
                     Apprenant.afficherapprenant();
                     break;
-
                 case 5:
+                    System.out.println(" Voila la liste principale");
                     break;
+
 
             }
         }
@@ -83,12 +85,13 @@ public class Application {
 
         public static void menuForamteur() {
         int choix = 0;
-        while (choix != 4) {
+        while (choix != 5) {
             System.out.println("------------------------------- ");
             System.out.println("1 >> Ajouter un formateur : ");
             System.out.println("2 >> Modifier un foramteur :");
             System.out.println("3 >> Supprimer un foramteur :");
             System.out.println("4 >> Afficher un foramteur :");
+            System.out.println("5 >> La liste Principale :");
             System.out.println("---------------------------------");
             Scanner scanner = new Scanner(System.in);
             choix = scanner.nextInt();
@@ -108,6 +111,8 @@ public class Application {
                 case 4:
                     Formateur.afficherforamteur();
                     break;
+                case 5:
+                    System.out.println("Voila la liste principales");
 
             }
         }
@@ -115,12 +120,13 @@ public class Application {
 
     public static void menuClasse() {
         int choix = 0;
-        while (choix != 4) {
+        while (choix != 5) {
             System.out.println("------------------------------- ");
             System.out.println("1 >> Ajouter un classe : ");
             System.out.println("2 >> Modifier un classe :");
             System.out.println("3 >> Supprimer un classe :");
             System.out.println("4 >> Afficher un classe :");
+            System.out.println("5 >> La liste Principale :");
             System.out.println("---------------------------------");
             Scanner scanner = new Scanner(System.in);
             choix = scanner.nextInt();
@@ -140,6 +146,9 @@ public class Application {
                 case 4:
 
                     Classe.afficherclasse();
+                    break;
+                case 5:
+                    System.out.println("Voila la liste principale");
                     break;
 
             }
