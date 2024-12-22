@@ -1,6 +1,13 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Classe {
 
-    String Cl1;
+
+    static Scanner scanner = new Scanner(System.in);
+    Classe classe = new Classe();
+    ArrayList<Classe> classes = new ArrayList();
+
 
 
 

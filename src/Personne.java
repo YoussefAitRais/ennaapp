@@ -1,4 +1,7 @@
-public abstract class Personne
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Personne
 {
     private static int compteur=1;
     private int ID;
@@ -6,6 +9,10 @@ public abstract class Personne
     private String prenom;
     private String email;
 
+    static Scanner scanner = new Scanner(System.in);
+    Personne apprenant = new Personne();
+    static ArrayList<Personne> personnes = new ArrayList();
+    ArrayList<Classe> classes = new ArrayList();
 
     public Personne (  String name, String prenom , String email) {
         this.ID = compteur;
