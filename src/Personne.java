@@ -10,7 +10,7 @@ public class Personne
     private String email;
 
     static Scanner scanner = new Scanner(System.in);
-    Personne apprenant = new Personne();
+    Personne personne = new Personne();
     static ArrayList<Personne> personnes = new ArrayList();
     ArrayList<Classe> classes = new ArrayList();
 
@@ -24,6 +24,18 @@ public class Personne
     }
     public Personne(){
 
+    }
+
+    public static void ajoutformateur() {
+    }
+
+    public static void afficherformateur() {
+    }
+
+    public static void supprimerformateur() {
+    }
+
+    public static void modifierformateur() {
     }
 
     public int getID() {
@@ -57,5 +69,8 @@ public class Personne
     public void setEmail(String email) {
         this.email = email;
     }
+
+   
+
 
 }

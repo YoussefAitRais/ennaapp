@@ -1,10 +1,12 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public  class Apprenant extends Personne
+public class Apprenant extends Personne
 {
    ArrayList<Double> listenote;
    private Classe classe;
+
+
    ArrayList<Apprenant> listeApprenants;
     static Scanner scanner = new Scanner(System.in);
     Apprenant apprenant = new Apprenant();
@@ -37,7 +39,7 @@ public  class Apprenant extends Personne
         System.out.println("-------------------------------");
 
 
-        apprenants.add(new Apprenant(nom, prenom, email));
+//        apprenants.add(new Apprenant(nom, prenom, email));
     }
 
     public static void afficherapprenant() {

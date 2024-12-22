@@ -37,7 +37,7 @@ public class Application {
                     menuApprenant();
                     break;
                 case 2:
-
+                    menuForamteur();
                     break;
                 case 3:
 
@@ -75,7 +75,7 @@ public class Application {
 
                 case 3:
 //                    supprimerapprenant();
-                    Apprenant.afficherapprenant();
+                    Apprenant.supprimerapprenant();
                     break;
 
                 case 4:
@@ -87,37 +87,37 @@ public class Application {
             }
         }
     }
-    public static void menuPersonne() {
+    public static void menuForamteur() {
         int choix = 0;
         while (choix != 4) {
             System.out.println("------------------------------- ");
-            System.out.println("1 >> Ajouter un personne : ");
-            System.out.println("2 >> Modifier un personne :");
-            System.out.println("3 >> Supprimer un personne :");
-            System.out.println("4 >> Afficher un personne :");
+            System.out.println("1 >> Ajouter un formateur : ");
+            System.out.println("2 >> Modifier un foramteur :");
+            System.out.println("3 >> Supprimer un foramteur :");
+            System.out.println("4 >> Afficher un foramteur :");
             System.out.println("---------------------------------");
             choix = scanner.nextInt();
             switch (choix) {
                 case 1:
 //                    ajoutapprenannt();
-                    Personne.ajoutapprenannt();
+                    Formateur.ajouteformateur();
 
                     break;
 
                 case 2:
 //                    modifierapprenant();
-                    Personne.modifierapprenant();
+                    Formateur.modifierforamteur();
                     break;
 
                 case 3:
 //                    supprimerapprenant();
-                    Personne.afficherapprenant();
+                    Formateur.supprimerformteur();
                     break;
 
                 case 4:
 
 //                    afficherapprenant();
-                    Personne.afficherapprenant();
+                    Formateur.afficherforamteur();
                     break;
 
             }
