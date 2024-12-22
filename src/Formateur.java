@@ -54,7 +54,7 @@ public class Formateur extends Personne {
             System.out.println("le email est : " + formateurs.get(i).getEmail() + "\n\n\n");
         }
     }
-    
+
     public static void modifierforamteur() {
 
         System.out.println("Entre le nombre de ID");

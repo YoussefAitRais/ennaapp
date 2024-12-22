@@ -40,7 +40,7 @@ public class Application {
                     menuForamteur();
                     break;
                 case 3:
-
+                     menuClasse();
                     break;
                 case 4:
 
@@ -99,25 +99,51 @@ public class Application {
             choix = scanner.nextInt();
             switch (choix) {
                 case 1:
-//                    ajoutapprenannt();
                     Formateur.ajouteformateur();
-
                     break;
 
                 case 2:
-//                    modifierapprenant();
                     Formateur.modifierforamteur();
                     break;
 
                 case 3:
-//                    supprimerapprenant();
                     Formateur.supprimerformteur();
                     break;
 
                 case 4:
-
-//                    afficherapprenant();
                     Formateur.afficherforamteur();
+                    break;
+
+            }
+        }
+    }
+
+    public static void menuClasse() {
+        int choix = 0;
+        while (choix != 4) {
+            System.out.println("------------------------------- ");
+            System.out.println("1 >> Ajouter un classe : ");
+            System.out.println("2 >> Modifier un classe :");
+            System.out.println("3 >> Supprimer un classe :");
+            System.out.println("4 >> Afficher un classe :");
+            System.out.println("---------------------------------");
+            choix = scanner.nextInt();
+            switch (choix) {
+                case 1:
+                    Classe.ajouteclasse();
+                    break;
+
+                case 2:
+                    Classe.modifierclasse();
+                    break;
+
+                case 3:
+                    Classe.supprimerclasse();
+                    break;
+
+                case 4:
+
+                    Classe.afficherclasse();
                     break;
 
             }
